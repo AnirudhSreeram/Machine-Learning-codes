@@ -24,7 +24,7 @@ class KNN:
 
     def _predict(self, x):
         # compute distances
-        distances = [euclidian_distances(x,x_train) for x_train in self.X_train]
+        distances = [euclidian_distances(x,all_samples) for all_samples in self.X_train]
 
         # get K nearest samples
         k_indices = np.argsort(distances)[:self.k]
