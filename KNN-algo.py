@@ -28,7 +28,7 @@ class KNN:
 
         # get K nearest samples
         k_indices = np.argsort(distances)[:self.k]
-        k_nearest_lable = [self.y_train[i] for i in k_indices]
+        k_nearest_lable = [self.y_train[index] for index in k_indices]
 
         # so a majority vote
         most_common = Counter(k_nearest_lable).most_common(1)
